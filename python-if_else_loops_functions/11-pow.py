@@ -4,3 +4,4 @@ def pow(a, b):
     while b != 0:
         product *= a
         b -= 1
+    return product
