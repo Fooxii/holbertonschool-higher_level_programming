@@ -3,6 +3,4 @@ def print_last_digit(number):
     lastdig = abs(number) % 10
     if number < 0:
         print(f"-{lastdig}",end="")
-    else:
-        print(f"{lastdig}",end="")
     return lastdig
