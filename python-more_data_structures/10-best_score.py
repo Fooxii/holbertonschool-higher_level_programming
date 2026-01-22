@@ -1,10 +1,14 @@
 #!/usr/bin/python3
 def best_score(a_dictionary):
-    if len(a_dictionary) == 0:
+    if not a_dictionary:
         return None
-    else:
-        best = 0
-        for key in a_dictionary:
-            if a_dictionary[key] > 0:
-                best = a_dictionary[key]
-        return best
+
+    best_key = None
+    best_value = None
+
+    for key in a_dictionary:
+        if best_value is None or a_dictionary[key] > best_value:
+            best_value = a_dictionary[key]
+            best_key = key
+
+    return best_key
