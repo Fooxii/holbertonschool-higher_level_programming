@@ -26,11 +26,14 @@ Traceback (most recent call last):
 ...
 TypeError: a must be an integer
 
->>> add_integer(1e20, 2.5)
-100000000000000000002
+>>> add_integer(1e20, 5)
+100000000000000000005
+
+>>> add_integer(2.5, 2.5)
+4
 
 >>> import math
 >>> add_integer(math.nan, 5)
 Traceback (most recent call last):
 ...
-TypeError: a must be an integer
+ValueError: cannot convert float NaN to integer
