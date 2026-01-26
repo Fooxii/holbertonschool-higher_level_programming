@@ -6,6 +6,7 @@ This module provides a function to print a formatted full name,
 with type validation for its inputs.
 """
 
+
 def say_my_name(first_name, last_name=""):
     """
     Print a formatted string containing a person's name.
