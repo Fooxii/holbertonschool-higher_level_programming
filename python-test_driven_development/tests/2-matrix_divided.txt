@@ -22,7 +22,19 @@ Rounding to 2 decimal places:
 >>> matrix_divided([[1, 2]], 3)
 [[0.33, 0.67]]
 
-Error cases:
+----------------------------------------
+Edge cases
+----------------------------------------
+
+Dividing by infinity (all results should be 0.0):
+
+>>> import math
+>>> matrix_divided([[1, 2], [3, 4]], math.inf)
+[[0.0, 0.0], [0.0, 0.0]]
+
+----------------------------------------
+Error cases
+----------------------------------------
 
 Matrix must be a list of lists of numbers:
 
@@ -56,3 +68,21 @@ Division by zero:
 Traceback (most recent call last):
 ...
 ZeroDivisionError: division by zero
+
+----------------------------------------
+Missing arguments
+----------------------------------------
+
+Missing div argument:
+
+>>> matrix_divided([[1, 2]])
+Traceback (most recent call last):
+...
+TypeError: matrix_divided() missing 1 required positional argument: 'div'
+
+Missing both arguments:
+
+>>> matrix_divided()
+Traceback (most recent call last):
+...
+TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'

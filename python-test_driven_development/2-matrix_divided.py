@@ -20,7 +20,7 @@ def matrix_divided(matrix, div):
         TypeError: If matrix is not a list of lists of integers/floats.
         TypeError: If each row of the matrix is not the same size.
         TypeError: If div is not a number.
-        ZeroDivisionError: If div is equal to zero.        
+        ZeroDivisionError: If div is equal to zero.
     """
     if not isinstance(div, (int, float)):
         raise TypeError("div must be a number")
@@ -28,13 +28,15 @@ def matrix_divided(matrix, div):
         raise ZeroDivisionError("division by zero")
 
     if not isinstance(matrix, list) or len(matrix) == 0:
-        raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+        raise TypeError("matrix must be a matrix "
+                        "(list of lists) of integers/floats")
 
     row_length = None
 
     for row in matrix:
         if not isinstance(row, list) or len(row) == 0:
-            raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+            raise TypeError("matrix must be a matrix "
+                            "(list of lists) of integers/floats")
 
         if row_length is None:
             row_length = len(row)
@@ -43,7 +45,8 @@ def matrix_divided(matrix, div):
 
         for elem in row:
             if not isinstance(elem, (int, float)):
-                raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+                raise TypeError("matrix must be a matrix "
+                                "(list of lists) of integers/floats")
 
     new_matrix = []
     for row in matrix:
