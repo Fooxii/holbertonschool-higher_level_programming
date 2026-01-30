@@ -24,9 +24,6 @@ class Square:
 
         self.__size = value
 
-    def __init__(self, position):
-        self.position = position
-
     @property
     def position(self):
         """
