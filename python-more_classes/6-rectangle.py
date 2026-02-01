@@ -9,6 +9,7 @@ class Rectangle:
     Docstring for Rectangle
     """
     number_of_instances = 0
+    print_symbol = "#"
 
     def __init__(self, width=0, height=0):
         self.width = width
@@ -54,7 +55,7 @@ class Rectangle:
         rect = ""
         for i in range(self.__height):
             for _ in range(self.__width):
-                rect += "#"
+                rect += Rectangle.print_symbol
 
             if i != self.__height - 1:
                 rect += "\n"
