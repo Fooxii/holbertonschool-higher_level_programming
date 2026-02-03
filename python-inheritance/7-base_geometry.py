@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Docstring for python-inheritance.6-base_geometry
+Docstring for python-inheritance.7-base_geometry
 """
 
 
@@ -12,7 +12,7 @@ class BaseGeometry:
         raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
-        if not isinstance(value, int):
+        if type(value) is not int:
             raise TypeError("{} must be an integer".format(name))
         if value <= 0:
             raise ValueError("{} must be greater than 0".format(name))
