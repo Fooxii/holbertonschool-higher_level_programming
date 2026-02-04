@@ -3,6 +3,7 @@ from abc import ABC, abstractmethod
 import math
 
 
+
 class Shape(ABC):
 
     @abstractmethod
@@ -31,10 +32,10 @@ class Rectangle(Shape):
         self.__height = height
 
     def area(self):
-        return math.pi * (abs(self.__radius) ** 2)
+        return self.__width * self.__height
 
     def perimeter(self):
-        return 2 * math.pi * abs(self.__radius)
+        return 2 * (self.__width + self.__height)
 
 
 def shape_info(argument):
