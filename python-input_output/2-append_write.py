@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Docstring for python-input_output.1-write_file
+Docstring for python-input_output.2-append_write
 """
 
 
@@ -11,5 +11,5 @@ def write_file(filename="", text=""):
     :param filename: Description
     :param text: Description
     """
-    with open(filename, 'w', encoding="utf-8") as file:
+    with open(filename, 'a', encoding="utf-8") as file:
         return file.write(text)
