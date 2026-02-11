@@ -4,9 +4,9 @@ Docstring for python-input_output.2-append_write
 """
 
 
-def write_file(filename="", text=""):
+def append_write(filename="", text=""):
     """
-    Docstring for write_file
+    Docstring for append_write
 
     :param filename: Description
     :param text: Description
