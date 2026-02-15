@@ -16,7 +16,7 @@ def serialize_and_save_to_file(data, filename):
         json.dump(data, file)
 
 
-def load_and_diserialize(filename):
+def load_and_deserialize(filename):
     """
     Docstring for load_and_diserialize
 
