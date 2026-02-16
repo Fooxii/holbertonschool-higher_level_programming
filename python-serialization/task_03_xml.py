@@ -36,7 +36,11 @@ def deserialize_from_xml(filename):
         for child in root:
             value = child.text
 
-            if value.isdigit():
+            if value is None:
+                result[child.tag] = None
+                continue
+
+            if value.lstrip('-').isdigit():
                 value = int(value)
             elif value.lower() == "true":
                 value = True
