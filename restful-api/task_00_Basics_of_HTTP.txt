@@ -1,0 +1,19 @@
+1. Differentiating HTTP and HTTPS
+    HTTP and HTTPS are both protocols that allow web browsers to request and receive things like HTML and other content inside websites.  HTTP requests and responses are written in plaintext, but HTTPS uses TLS to encrypt those requests and responses to make sure nobody reads them, this is the only key distinction between HTTP and HTTPS
+
+2. Understanding HTTP Structure
+    When you visit a website you can right-click and choose "Inspect", then click on the "Network" tab and reload the page, this will show you all of the requests made along with the status codes of the requests shown.
+
+3. Exploring HTTP Methods and Status codes
+    Four common HTTP methods:
+        1. GET - A method used when you want to retrieve data
+        2. POST - A method used when you want to save or create new data
+        3. PUT - A method used when you want to update existing data
+        4. DELETE - A method used when you want to delete data
+
+    Five common HTTP status codes:
+        1. 200 OK - This status code means the request was a success and it can be encountered when successfully fetching data
+        2. 201 Created - This status code means that the request to create a resource was successful and it can be encountered when using the POST method
+        3. 404 Not Found - This status code means that the requested resource was not found and it can be encountered when trying to access data that does not existing
+        4. 403 Forbidden - This status code means that the request was refused due to restricted access and it can be encountered when trying to access restricted data
+        5. 500 Internal Server Error - This status code meants that an unexpected condition is preventing the request from being successful and it can be encountered when there is too much traffic
