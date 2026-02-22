@@ -23,20 +23,20 @@ def fetch_and_save_posts():
     if response.status_code == 200:
         posts = response.json()
 
-    structured_posts = []
+        structured_posts = []
 
-    for post in posts:
-        structured_posts.append({
-            "id": post["id"],
-            "title": post["title"],
-            "body": post["body"]
-        })
+        for post in posts:
+            structured_posts.append({
+                "id": post["id"],
+                "title": post["title"],
+                "body": post["body"]
+            })
 
-    with open("posts.csv", 'w', newline="", encoding="UTF-8") as file:
-        writer = csv.DictWriter(file, fieldnames=["id", "title", "body"])
+        with open("posts.csv", 'w', newline="", encoding="UTF-8") as file:
+            writer = csv.DictWriter(file, fieldnames=["id", "title", "body"])
 
-        writer.writeheader()
-        writer.writerows(structured_posts)
+            writer.writeheader()
+            writer.writerows(structured_posts)
 
 
 if __name__ == "__main__":
