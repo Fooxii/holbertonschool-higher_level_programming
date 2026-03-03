@@ -3,7 +3,7 @@ CREATE TABLE IF NOT EXISTS second_table (
     ID INT,
     NAME VARCHAR(256),
     SCORE INT
-)
+);
 INSERT INTO second_table (ID, NAME, SCORE)
 VALUES
     (1, "John", 10),
