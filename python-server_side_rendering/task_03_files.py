@@ -28,18 +28,15 @@ def items():
     return render_template('items.html', items=items_list)
 
 
-# ✅ NEW ROUTE (this is the task)
 @app.route('/products')
 def products():
     source = request.args.get('source')
     product_id = request.args.get('id')
 
-    # 🔹 Read JSON
     if source == "json":
         with open('products.json') as f:
             data = json.load(f)
 
-    # 🔹 Read CSV
     elif source == "csv":
         data = []
         with open('products.csv') as f:
@@ -49,11 +46,9 @@ def products():
                 row['price'] = float(row['price'])
                 data.append(row)
 
-    # 🔹 Wrong source
     else:
         return render_template('product_display.html', error="Wrong source")
 
-    # 🔹 Filter by ID
     if product_id:
         product_id = int(product_id)
         data = [p for p in data if p['id'] == product_id]
