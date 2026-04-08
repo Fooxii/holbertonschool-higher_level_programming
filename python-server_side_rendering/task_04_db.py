@@ -53,7 +53,11 @@ def products():
             conn = sqlite3.connect('products.db')
             cursor = conn.cursor()
 
-            cursor.execute("SELECT id, name, category, price FROM Products")
+            try:
+                cursor.execute("SELECT id, name, category, price FROM Products")
+            except:
+                cursor.execute("SELECT id, name, category, price FROM products")
+
             rows = cursor.fetchall()
 
             for row in rows:
