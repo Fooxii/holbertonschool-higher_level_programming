@@ -72,9 +72,6 @@ def products():
         except Exception:
             return render_template('product_display.html',error="Database error")
 
-        else:
-          return render_template('product_display.html',error="Wrong source")
-
     else:
         return render_template('product_display.html', error="Wrong source")
 
