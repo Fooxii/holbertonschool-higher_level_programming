@@ -1,0 +1,5 @@
+This directory (python-everything_is_object) will help you understand the concept of mutable and immutable objects, object id's, and why these are important concepts to learn.
+What is an object's id? An object's id is a unique integer assigned to every object on creation. Object id's are especially useful for understanding how mutable and immutable objects behave.
+A mutable object is an object whose value can be changed without the need to create a new object, while immutable objects cannot be changed unless a new object is created. The built-in function id() can be used to see this happen.
+When trying to change the value of an object, check its id before and after the value is changed. If the id stays the same, then that object type is mutable. However, if the id changes, that means a new object had to be created to change its value. To figure out an object's type, you can use the built-in type() function.
+Understanding object id's, mutability, and types helps you better understand how Python handles data. This makes it easier to predict how your code will behave and avoid unexpected bugs, especially when working with variables and functions.
